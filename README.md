@@ -4,6 +4,10 @@ An AI-powered **financial analysis tool** that fetches live news and stock data,
 
 ---
 
+## Live Demo
+
+[Click here to try the app](https://genaiequity-tool-wyhx9u2mm2jem9jnhpoux8.streamlit.app/)
+
 ## Features
 
 - Real-time news retrieval via NewsAPI
