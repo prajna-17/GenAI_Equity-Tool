@@ -1,0 +1,9 @@
+streamlit
+huggingface_hub
+python-dotenv
+requests
+yfinance
+matplotlib
+pandas
+sentence-transformers
+faiss-cpu
