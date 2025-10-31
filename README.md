@@ -1,33 +1,70 @@
-# 📊 GenAI Equity Research Assistant
+# GenAI Equity Research Assistant
 
-An AI-powered **financial analysis tool** that fetches live news and stock data, performs **sentiment analysis**, and answers analytical questions using **Retrieval-Augmented Generation (RAG)** — all through an interactive **Streamlit** interface.
+An AI-powered financial analysis tool that combines **real-time news summarization**, **sentiment analysis**, and **stock price visualization** — built with **Python, Streamlit, and Hugging Face Llama-3 API**.
 
 ---
 
-## Live Demo
+## Overview
 
-[Click here to try the app](https://genaiequity-tool-wyhx9u2mm2jem9jnhpoux8.streamlit.app/)
+This project allows users to:
 
-## Features
+- Fetch **latest financial news** for a company (e.g., AAPL, MSFT)
+- Generate **summaries and sentiment** using a Large Language Model (Llama 3)
+- Merge results with **live stock market data**
+- Visualize **Stock Price vs Sentiment** for clear trend insights
+- Ask **follow-up questions** (RAG-based query system) to get deeper insights from recent news
 
-- Real-time news retrieval via NewsAPI
-- Financial summarization and sentiment analysis using **LLMs (Llama 3.1)**
-- Retrieval-Augmented Generation (RAG) for question answering
-- Stock data visualization from **Yahoo Finance**
-- Clean Streamlit dashboard with live sentiment + price correlation
+---
+
+## 🖼️ Screenshots
+
+### 1. Dashboard Overview
+
+![Dashboard](assets/SS.png)
+
+## Key Features
+
+| Feature                                         | Description                                                       |
+| ----------------------------------------------- | ----------------------------------------------------------------- |
+| **LLM-based Summarization**                     | Generates concise 3-sentence summaries of financial news          |
+| **Sentiment Scoring**                           | Classifies news as _Bullish_, _Bearish_, or _Neutral_             |
+| **RAG System (Retrieval-Augmented Generation)** | Lets users ask contextual questions about the analyzed news       |
+| **Stock Price Integration**                     | Pulls and visualizes historical stock price data using `yfinance` |
+| **Streamlit Frontend**                          | Clean, interactive dashboard for company-wise analysis            |
 
 ---
 
 ## Tech Stack
 
-**Python**, **Streamlit**, **LangChain-style RAG**, **FAISS**, **SentenceTransformers**, **HuggingFace Inference API**, **yfinance**
+- **Frontend:** Streamlit
+- **Backend:** Python (LangChain-style custom helper functions)
+- **APIs:** Hugging Face Inference API (Llama 3.1–8B-Instruct)
+- **Libraries:** `pandas`, `matplotlib`, `yfinance`, `faiss`, `sentence-transformers`, `dotenv`
+- **Model Used:** `meta-llama/Llama-3.1-8B-Instruct`
 
 ---
 
-## Installation
+## Setup Instructions
+
+### Clone the Repository
 
 ```bash
-git clone https://github.com/prajna-17/genai-equitytool.git
-cd genai-equitytool
+git clone https://github.com/<prajna-17>/genai-equity-tool.git
+cd genai-equity-tool
+
+### Create a Virtual Environment
+python -m venv .venv
+source .venv/bin/activate      # for macOS/Linux
+.venv\Scripts\activate         # for Windows
+
 pip install -r requirements.txt
+
+### Add Your Hugging Face Token
+Create a .env file in the project root:
+HUGGINGFACEHUB_API_TOKEN=your_hf_token_here
+
+### Run the App
+streamlit run app.py
+
+
 ```
