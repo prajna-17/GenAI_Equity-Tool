@@ -46,9 +46,8 @@ This project allows users to:
 
 ## Setup Instructions
 
-### Clone the Repository
-
 ```bash
+### Clone the repository
 git clone https://github.com/<prajna-17>/genai-equity-tool.git
 cd genai-equity-tool
 
